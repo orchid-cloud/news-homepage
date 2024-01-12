@@ -1,6 +1,8 @@
 @use '../util' as u;
 
 .feature {
+  display: grid;
+  gap: u.rem(24);
   &__image {
   }
 
