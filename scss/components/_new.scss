@@ -28,6 +28,10 @@
     font-weight: 800;
     color: var(--c-white);
     margin-block-end: u.rem(8);
+
+    &:hover {
+      color: var(--c-yellow);
+    }
   }
 
   &__description {
