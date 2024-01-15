@@ -97,3 +97,7 @@ li {
     gap: u.rem(30);
   }
 }
+
+.noscroll {
+  overflow-y: hidden;
+}
