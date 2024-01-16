@@ -8,7 +8,7 @@
       type="image/x-icon"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title></title>
+    <title>News Homepage</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -40,18 +40,23 @@
             width="40"
             height="17"
             xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
           >
             <path d="M0 0h40v3H0zM0 7h40v3H0zM0 14h40v3H0z" />
             <path d="M0 0h40v3H0z" />
-            aria-hidden="true"
           </svg>
         </button>
 
         <div class="nav__overlay" aria-hidden="true"></div>
 
-        <div class="nav__content">
-          <button id="btnClose" class="nav__close">
-            <svg width="32" height="31" xmlns="http://www.w3.org/2000/svg">
+        <div class="nav__content" role="dialog" aria-labelledby="nav-label">
+          <button id="btnClose" class="nav__close" aria-label="Close">
+            <svg
+              width="32"
+              height="31"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+            >
               <path d="m2.919.297 28.284 28.284-2.122 2.122L.797 2.419z" />
               <path d="M.797 28.581 29.081.297l2.122 2.122L2.919 30.703z" />
             </svg>

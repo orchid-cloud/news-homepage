@@ -1,6 +1,7 @@
 import './scss/style.scss';
 
 const body = document.querySelector('body');
+const main = document.querySelector('main');
 const bntOpen = document.querySelector('#btnOpen');
 const bntClose = document.querySelector('#btnClose');
 const media = window.matchMedia('(width < 69.375em)');
@@ -12,6 +13,9 @@ function openMobileMenu() {
 
   bntOpen.setAttribute('aria-expanded', 'true');
   body.classList.add('noscroll');
+  navContent.removeAttribute('inert');
+  main.setAttribute('inert', '');
+  bntClose.focus();
 }
 
 function closeMobileMenu() {
@@ -19,12 +23,18 @@ function closeMobileMenu() {
 
   bntOpen.setAttribute('aria-expanded', 'false');
   body.classList.remove('noscroll');
+  navContent.setAttribute('inert', '');
+  main.removeAttribute('inert');
+  bntOpen.focus();
 }
 
 function setupNav(e) {
   if (e.matches) {
     //is mobile
     console.log('is mobile');
+
+    navContent.setAttribute('inert', '');
+
     setTimeout(() => {
       navContent.style.display = 'block';
       navOverlay.style.display = 'block';
@@ -32,6 +42,10 @@ function setupNav(e) {
   } else {
     //is desktop
     console.log('is desktop');
+
+    navContent.removeAttribute('inert');
+    main.removeAttribute('inert');
+
     navContent.style.display = '';
   }
 }
