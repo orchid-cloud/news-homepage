@@ -9,8 +9,6 @@ const navContent = document.querySelector('.nav__content');
 const navOverlay = document.querySelector('.nav__overlay');
 
 function openMobileMenu() {
-  console.log('open');
-
   bntOpen.setAttribute('aria-expanded', 'true');
   body.classList.add('noscroll');
   navContent.removeAttribute('inert');
@@ -19,8 +17,6 @@ function openMobileMenu() {
 }
 
 function closeMobileMenu() {
-  console.log('close');
-
   bntOpen.setAttribute('aria-expanded', 'false');
   body.classList.remove('noscroll');
   navContent.setAttribute('inert', '');
@@ -31,7 +27,6 @@ function closeMobileMenu() {
 function setupNav(e) {
   if (e.matches) {
     //is mobile
-    console.log('is mobile');
 
     navContent.setAttribute('inert', '');
 
@@ -41,7 +36,6 @@ function setupNav(e) {
     }, 500);
   } else {
     //is desktop
-    console.log('is desktop');
 
     navContent.removeAttribute('inert');
     main.removeAttribute('inert');
